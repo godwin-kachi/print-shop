@@ -150,39 +150,28 @@
 		<br>
 		<div class="container">
 			<div class="row">
+				<?php
+					$product = "SELECT * FROM product_table, category WHERE product_table.category_id = category.category_id";
+					$fetch_product = mysqli_query($db, $product);
+
+					while ($row = mysqli_fetch_assoc($fetch_product)) : ?>
+
+					<?php
+						$price = $row['price'];
+						$formatted_price = number_format($price);
+					?>
+
+				
 				
 				<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="card">
-							<img src="https://via.placeholder.com/150" alt="Letterhead" style="width:100%">
-							<h4>Letterhead</h4>
-							<p class="price">N4,500.00</p>
+							<img src="dashboard/<?=$row['thumbnail'];?>" alt="<?=$row['name']?>" style="width:100%">
+							<h4><?=$row['pname']?></h4>
+							<p class="price">	&#x20A6; <?=$formatted_price?></p>
 							<button>Order</button>
 						</div> 
 				</div>
-				<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="card">
-							<img src="https://via.placeholder.com/150" alt="Letterhead" style="width:100%">
-							<h4>Letterhead</h4>
-							<p class="price">N4,500.00</p>
-							<button>Order</button>
-						</div> 
-				</div>
-				<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="card">
-							<img src="https://via.placeholder.com/150" alt="Letterhead" style="width:100%">
-							<h4>Letterhead</h4>
-							<p class="price">N4,500.00</p>
-							<button>Order</button>
-						</div> 
-				</div>
-				<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="card">
-							<img src="https://via.placeholder.com/150" alt="Letterhead" style="width:100%">
-							<h4>Letterhead</h4>
-							<p class="price">N4,500.00</p>
-							<button>Order</button>
-						</div> 
-				</div>
+				<?php endwhile; ?>
 			</div>
 		</div>	
 		<br />

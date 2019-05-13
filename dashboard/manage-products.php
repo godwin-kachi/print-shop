@@ -54,7 +54,7 @@
                     <div class="controls">
                         <ul>
                             <li><a href="add_new_product.php">Add New Product</a></li>
-                            <li><a href="">Update Existing Product</a></li>
+                            <li><a href="update_product.php">Update Existing Product</a></li>
                         </ul>
                     </div>
     <?php

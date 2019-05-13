@@ -57,7 +57,7 @@
 						<div class="card">
 							<img src="dashboard/<?=$row['thumbnail'];?>" alt="<?=$row['pname'];?>" style="width:100%">
 							    <h4><?php echo $row['pname']; ?></h4>
-							    <p class="price">N<?php echo $row['price'] ; ?></p>
+							    <p class="price">N <?php echo $row['price'] ; ?></p>
                                 <button>Add to Cart</button>
                                
                         </div>   
