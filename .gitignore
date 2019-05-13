@@ -1,0 +1,11 @@
+vendor
+node_modules
+.env
+.vscode
+try.php
+note.txt
+tour.php
+table.php
+icon.php
+blank.php
+error.php

@@ -1,0 +1,40 @@
+.thumbnails{
+    border: 0.5px solid gray;
+    border-radius: 8px;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    margin: 10px;
+
+}
+.thumbnails p{
+    font-size: 1.5rem;
+}
+/******** LOGIN WINDOW STYLING
+****************/
+.framebox{
+    width: 40%;
+    margin: auto;
+    border-left: 3px solid #000;
+    margin-top: 80px;
+    padding: 5px;
+}
+.bkg_dez{
+    background-attachment: fixed;
+    background: #89ee6a;
+}
+.main_bkg{
+    background: #fff;
+}
+.patch{
+    margin-top:100px;
+    margin-right: auto;
+    margin-left: 500px;
+}
+.img-frame{
+    margin: auto;
+    width: 30%;
+    padding-top: 100px;
+    padding-bottom: 0;
+}

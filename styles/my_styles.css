@@ -1,0 +1,23 @@
+.my_menu{
+    display: block;
+	position: relative;
+	border-bottom: solid 1px #b5aec4;
+	vertical-align: middle;
+}
+
+.my_static_list{
+    list-style: none;
+}
+.box{
+	width: 100%;
+	border-style: solid ;
+	border: 1px;
+}
+.elements{
+	margin-right: 30px;
+	
+}
+.content{
+	margin-top: 350px;
+	position: absolute;
+}
