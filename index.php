@@ -37,8 +37,8 @@
 									<a href="08067915982"><i style="font-size:15px; padding-left:10px;" class="fa">&#xf232;</i>&nbsp;0806 791 5982</a></div>	
 							</div>
 							<!-- <div class="row">
-							<div class="part-deco quarter-1"></div>
-						</div> -->
+						<div class="part-deco quarter-1"></div>
+					</div> -->
 						<div class="col-md-2 text-right">
 							<div class="top_nav_right">
 								<ul class="top_nav_menu">
@@ -151,7 +151,7 @@
 		<div class="container">
 			<div class="row">
 				<?php
-					$product = "SELECT * FROM product_table, category WHERE product_table.category_id = category.category_id";
+					$product = "SELECT * FROM product_table, category WHERE product_table.category_id = category.category_id LIMIT 15";
 					$fetch_product = mysqli_query($db, $product);
 
 					while ($row = mysqli_fetch_assoc($fetch_product)) : ?>
@@ -166,9 +166,9 @@
 				<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="card">
 							<img src="dashboard/<?=$row['thumbnail'];?>" alt="<?=$row['name']?>" style="width:100%">
-							<h4><?=$row['pname']?></h4>
-							<p class="price">	&#x20A6; <?=$formatted_price?></p>
-							<button>Order</button>
+							<h6><?=$row['pname']?></h6>
+							<p class="price">From	&#x20A6; <?=$formatted_price?></p>
+							<button> <a href="view_stock.php?id=<?=$row['category_id']?>">Explore</a></button>
 						</div> 
 				</div>
 				<?php endwhile; ?>

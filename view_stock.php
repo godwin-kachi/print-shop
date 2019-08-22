@@ -45,19 +45,26 @@
             <div class="container" style="display:-moz-inline-grid;">
             
             <div class="row">
+
+            <?php
+					
+					?>
                 
             <?php 
             if($rows<=0){
                 echo'<div class="text-center"><h2>No results Found!</h2></div>';
             }
-            while ($row = mysqli_fetch_assoc($data)):?>
+            while ($row = mysqli_fetch_assoc($data)):
+            	$price = $row['price'];
+                        $formatted_price = number_format($price);
+                        ?>
                     
                       <div class="col-sm-6 col-md-4 col-lg-3" >
                          
 						<div class="card">
 							<img src="dashboard/<?=$row['thumbnail'];?>" alt="<?=$row['pname'];?>" style="width:100%">
 							    <h4><?php echo $row['pname']; ?></h4>
-							    <p class="price">N <?php echo $row['price'] ; ?></p>
+							    <p class="price">N <?php echo $formatted_price ; ?></p>
                                 <button>Add to Cart</button>
                                
                         </div>   

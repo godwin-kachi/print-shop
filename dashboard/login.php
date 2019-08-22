@@ -38,7 +38,7 @@ include('header.php'); ?>
                     </p>
                 </fieldset>
             </form>
-            <h6 class="center">Click <a href="../index.html">here</a> to go back to shop </h6>
+            <h6 class="center">Click <a href="../index.php">here</a> to go back to shop </h6>
         </div>
         <!--/span-->
     </div><!--/row-->
